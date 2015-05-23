@@ -1,0 +1,38 @@
+{
+  "name": "rb-index",
+  "version": "1.0.0",
+  "description": "TypeScript 1.5 beta includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "connect": "^3.3.5",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-typescript": "~2.7.5",
+    "gulp-plumber": "~1.0.1",
+    "gulp-sourcemaps": "~1.5.2",
+    "open": "0.0.5",
+    "serve-static": "^1.9.2",
+    "systemjs-builder": "^0.10.6",
+    "typescript": "~1.5.0-beta"
+  },
+  "dependencies": {
+    "angular2": "~2.0.0-alpha.25",
+    "es6-module-loader": "^0.15.0",
+    "systemjs": "^0.15.0",
+    "zone.js": "^0.4.1",
+    "reflect-metadata": "0.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/ts-quickstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angular/ts-quickstart/issues"
+  },
+  "homepage": "https://github.com/angular/ts-quickstart"
+}

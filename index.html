@@ -1,0 +1,25 @@
+<!-- index.html -->
+<html>
+  <head>
+    <title>Angular 2 Quickstart</title>
+  </head>
+  <body>
+  
+    <!-- The app component created in app.ts -->
+    <rb-index-app></rb-index-app>
+    
+    
+    <script src="./lib/traceur-runtime.js"></script>
+    <script src="./lib/es6-module-loader-sans-promises.js"></script>
+    <script src="./lib/Reflect.js"></script>
+    <script src="./lib/system.js"></script>
+    <script src="./lib/zone.js"></script>
+    <script src="./lib/angular2.js"></script>
+    
+    <script>
+    System.baseURL += 'dist/';
+    System.import('./app');
+    </script>
+    
+  </body>
+</html>
