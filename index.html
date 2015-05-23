@@ -2,24 +2,34 @@
 <html>
   <head>
     <title>Angular 2 Quickstart</title>
-  </head>
-  <body>
-  
-    <!-- The app component created in app.ts -->
-    <rb-index-app></rb-index-app>
-    
-    
     <script src="./lib/traceur-runtime.js"></script>
     <script src="./lib/es6-module-loader-sans-promises.js"></script>
     <script src="./lib/Reflect.js"></script>
     <script src="./lib/system.js"></script>
     <script src="./lib/zone.js"></script>
-    <script src="./lib/angular2.js"></script>
+
+    <script src="./lib/angular2.js"></script>    
+    <script src="./lib/router.js"></script>
+      
+    <!--      
+    <script src="./lib/traceur-runtime.js"></script>
+    <script src="./lib/es6-module-loader-sans-promises.js"></script>    
+    <script src="./lib/system.js"></script>      
+    <script src="https://code.angularjs.org/2.0.0-alpha.23/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.23/router.dev.js"></script>
+    -->
     
     <script>
     System.baseURL += 'dist/';
     System.import('./app');
     </script>
     
+    
+  </head>
+  <body>
+  
+    <!-- The app component created in app.ts -->
+    <rb-index-app></rb-index-app>
+
   </body>
 </html>

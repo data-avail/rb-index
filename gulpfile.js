@@ -16,6 +16,17 @@ gulp.task('clean', function (done) {
   del(['dev'], done);
 });
 
+/*
+gulp.task('build:router', function () {
+  var builder = new Builder({
+    paths: {
+      'angular2/router/*': 'node_modules/angular2/es6/prod/router.es6'
+    }
+  });
+  return builder.build('angular2/angular2', './lib/router.js', {});
+});
+*/
+
 gulp.task('build:angular2', function () {
   var builder = new Builder({
     paths: {
@@ -28,6 +39,7 @@ gulp.task('build:angular2', function () {
       }
     }
   });
+  builder.build('angular2/router', './lib/router.js', {});
   return builder.build('angular2/angular2', './lib/angular2.js', {});
 });
 

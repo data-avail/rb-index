@@ -758,7 +758,7 @@ declare module "angular2/di" {
   var Injectable: any;
 }
 
-declare module "angular2/router" {
+declare module "angular2/router" { 
   var Router: any;
   var RouterOutlet: any;
   var RouterLink: any;

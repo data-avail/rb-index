@@ -1,8 +1,11 @@
 import {Component, View, NgFor} from 'angular2/angular2';
 import {ResortsListItem} from './resorts-list-item'
+import {ResortsEP} from './resorts-ep'
+
 
 @Component({
-  selector: 'resorts-list'
+    injectables: [ResortsEP],
+    selector: 'resorts-list'
 })
 @View({
   template: `
@@ -18,7 +21,11 @@ import {ResortsListItem} from './resorts-list-item'
 export class ResortsList {
   items: Array<{name : string}>; 
   
-  constructor() {
-    this.items = [{name: "Sidre"}, {name: "Cral"}];
+  constructor(resortsEP:ResortsEP) {
+    var resortsEP = new ResortsEP();
+    resortsEP.getResorts().then(res => {
+      this.items = res;  
+    })
+    
   }
 }
