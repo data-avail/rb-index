@@ -4,7 +4,7 @@ import {ResortsEP} from './resorts-ep'
 
 
 @Component({
-    injectors: [ResortsEP],
+    appInjector: [ResortsEP],
     selector: 'resorts-list'
 })
 @View({
@@ -21,8 +21,7 @@ import {ResortsEP} from './resorts-ep'
 export class ResortsList {
   items: Array<{name : string}>; 
   
-  constructor(/*resortsEP: ResortsEP*/) {
-    var resortsEP = new ResortsEP();        
+  constructor(resortsEP: ResortsEP) {        
     resortsEP.getResorts().then(res => {
       this.items = res;  
     })
