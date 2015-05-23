@@ -8,8 +8,8 @@ import { RouterOutlet, RouteConfig, routerInjectables, Router } from 'angular2/r
   selector: 'rb-index-app'
 })
 @View({
-  directives: [RouterOutlet, ResortsPage],
-  template: '<router-outlet></router-outlet>'
+  directives: [ResortsPage],
+  template: '<resorts-page></resorts-page>'
 })
 @RouteConfig([
   { path: "/", component: ResortsPage, as : "resorts" },
@@ -22,4 +22,4 @@ class RbIndexApp {
 
 
 
-bootstrap(RbIndexApp, routerInjectables);
+bootstrap(RbIndexApp);
