@@ -6,7 +6,7 @@ import {Directive, EventEmitter} from 'angular2/angular2'
   hostListeners : {'keyup': 'onKeyup($event.target.value)'}
 })
 export class InputChanged {
-  private changed: any;//EventEmiter
+  private changed: EventEmitter;
   private recentVal: string;
   
   constructor() {

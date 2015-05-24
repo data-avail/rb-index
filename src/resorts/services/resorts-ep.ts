@@ -1,5 +1,21 @@
 import {IResortVM} from "../vm"
 export class ResortsEP {
+	
+	createResort(name: string) : Promise<IResortVM> { 
+		
+		var result : IResortVM = {
+			id: "1969",
+			name: name,
+			description: null, 
+			shortDescription: null, 
+			location : null,
+			media : [],
+			contacts : []						
+		};
+	
+		return Promise.resolve(result);
+	}
+	
 	getResorts(filter: string) : Promise<IResortVM[]> {
 		
 		var result : IResortVM[] = [{
@@ -33,8 +49,8 @@ export class ResortsEP {
 				geo : {lat: 53.590665, lon: 58.595443}
 			},
 			media : [
-				{type: "video", importance : 3, tags: ["review"], url: "http://www.youtube.com/watch?v=3ZtwjUt3s5w"},
-				{type: "image", importance : 2, tags: ["piste"], url: "http://cs315130.vk.me/v315130786/4395/48okt7gBvGs.jpg"},
+				{type: "video", importance : 3, tags: ["review", "piste", "indoor"], url: "http://www.youtube.com/watch?v=3ZtwjUt3s5w"},
+				{type: "image", importance : 2, tags: ["piste", "portrait"], url: "http://cs315130.vk.me/v315130786/4395/48okt7gBvGs.jpg"},
 				],
 			contacts : [ {
 				type: "phone", importance : 3, kind: "administration", value: "+7 (3519) 255-601"

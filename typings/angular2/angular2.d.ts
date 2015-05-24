@@ -708,6 +708,7 @@ declare module "angular2/angular2" {
   interface RenderCompiler {}
   interface Renderer {}
   interface EventDispatcher {}
+  interface EventEmitter {next: any}
 }
 
 declare module "angular2/annotations" {
@@ -766,4 +767,14 @@ declare module "angular2/router" {
   var routerInjectables: any;
   var RouteConfigAnnotation: any;
   var RouteConfig: any;
+}
+
+declare module "angular2/forms" { 
+  var FormBuilder: FormBuilder;
+  var Validators: any;
+  var formDirectives: any;
+  var ControlGroup: ControlGroup;
+  
+  interface ControlGroup {group: any, valid: boolean, value: any, controls: any}
+  interface FormBuilder {group: any}
 }

@@ -13,13 +13,14 @@ import {InputChanged} from '../../../global/directives/input-changed'
 })
 export class ResortsFilter {
     
-    private changed: any;//EventEmiter
+    private changed: EventEmitter;
    
     constructor() {
       this.changed = new EventEmitter();
     }
     
     onChanged(value) {
+      //ObservableWrapper.callNext(this.destroy, null);
       this.changed.next(value);
     }
     

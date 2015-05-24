@@ -2,6 +2,7 @@ import {Component, View, NgFor} from 'angular2/angular2';
 import {ResortsListItem} from './resorts-list-item'
 import {IResortVM} from '../../vm';
 
+
 @Component({
     properties: {items : "items"},
     selector: 'resorts-list'
