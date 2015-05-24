@@ -1,10 +1,9 @@
 import {Component, View, NgFor} from 'angular2/angular2';
 import {ResortsListItem} from './resorts-list-item'
-import {ResortsEP} from './resorts-ep'
-
+import {IResortVM} from '../../vm';
 
 @Component({
-    appInjector: [ResortsEP],
+    properties: {items : "items"},
     selector: 'resorts-list'
 })
 @View({
@@ -19,12 +18,10 @@ import {ResortsEP} from './resorts-ep'
   directives: [ResortsListItem, NgFor]
 })
 export class ResortsList {
-  items: Array<{name : string}>; 
   
-  constructor(resortsEP: ResortsEP) {        
-    resortsEP.getResorts().then(res => {
-      this.items = res;  
-    })
+  items: IResortVM[]; 
+    
+  constructor() {        
     
   }
 }

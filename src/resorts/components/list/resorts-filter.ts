@@ -1,6 +1,5 @@
 import {Component, View, EventEmitter} from 'angular2/angular2'
-import {InputChanged} from '../global/input-changed'
-
+import {InputChanged} from '../../../global/directives/input-changed'
 
 @Component({
   selector: 'resorts-filter',

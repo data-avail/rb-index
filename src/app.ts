@@ -1,7 +1,6 @@
 /// <reference path="../typings/tsd.d.ts" />
 import {Component, View, bootstrap} from 'angular2/angular2';
-import {ResortsPage} from './resorts/resorts-page'
-import {ResortItem} from './resorts/resort-item'
+import {ResortsPage} from './resorts/components/list/resorts-page'
 
 import { RouterOutlet, RouteConfig, routerInjectables, Router } from 'angular2/router';
 
@@ -14,8 +13,7 @@ import { RouterOutlet, RouteConfig, routerInjectables, Router } from 'angular2/r
   template: '<router-outlet></router-outlet>'
 })
 @RouteConfig([
-  { path: "/", component: ResortsPage, as : "home" },
-  { path: "/resorts/item", component: ResortItem, as : "resort" },
+  { path: "/", component: ResortsPage, as : "home" }
 ])
 class RbIndexApp {
   constructor() {
